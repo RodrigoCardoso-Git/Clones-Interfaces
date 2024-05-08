@@ -1,45 +1,61 @@
+:root {
+    --color-background-green: #42b72a;
+    --color-white-border: #dadde1;
+    --color-white-text: #fff;
+    --color-blue-textBackground: #0866ff;
+    --color-bodytext-black: #1c1e21;
+}
+
 * {
+    border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 .container {
-    margin: 20px;
+    box-sizing: border-box;
     height: 100vh;
     width: 100vw;
     display: flex;
     align-items: center;
+    justify-content: center;
+    column-gap: 100px;
 }   
 
 img {
     height: 106px;
+    position: relative;
+    left: -70px;
 }
 
 .container-left {
-    height: 50vh;
-    width: 50vw;
+    height: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-self: center;
+    justify-content: center;
+
 }
 
 .container-right {
-    height: 50vh;
-    width: 50vw;
+    height: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .container-right form {
+    width: 100%;
     margin: 10px;
     display: flex;
     flex-direction: column;
-    background-color: bisque;
-    width: 60%;
-    height: 70%;
+    background-color: var(--color-white-text);
     border-radius: 0.8rem;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1), 0 2px 4px rgba(0, 0, 0, .1);
 }
 
 input {
@@ -49,6 +65,7 @@ input {
     padding: 10px;
     outline: none;
     border: 0;
+    outline: 1px solid var(--color-white-border);
 }
 
 input[type='email'] {
@@ -60,20 +77,74 @@ input[type='password'] {
     margin-bottom: 10px;
 }
 
+input[placeholder] {
+    font-size: 16px;
+}
+
 button {
     width: 94%;
     align-self: center;
     margin: 5px;
     height: 45px;
-    background-color: #0866ff;
+    background-color: var(--color-blue-textBackground);
     border: none;
     color: white;
     font-size: 18px;
     font-weight: bold;
     border-radius: 0.6rem;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 
 a {
     align-self: center;
+    text-decoration: none;
+    margin: 20px;
+
 }
+
+.toSeparate {
+    border-bottom: 1px solid var(--color-white-border);
+    width: 94%;
+}
+
+
+.btn {
+    box-sizing: border-box;
+    background-color: var(--color-background-green);
+    margin: 10px;
+    height: 45px;
+    width: 160px;
+    align-self: center;
+    border-radius: 0.4rem;
+}
+
+.btn a {
+    position: absolute;
+    color: var(--color-white-text);
+    font-weight: bold;
+}
+
+/* div .btn {
+    box-sizing: border-box;
+    background-color: var(--color-background-green);
+    border: var(--color-white-border);
+    height: 45px;
+    margin: 10px;
+    border-radius: 0.4rem;
+    width: 150px;
+    text-align: center;
+    font-weight: bold;
+    align-self: center;
+} */
+
+h2 {
+    text-align: start;
+    font-size: 24px;
+}
+
+p {
+    margin-top: 10px;
+    text-align: center;
+}
+    
